@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<header>
+	<meta charset="utf-8">
+	<title>Questão 4</title>
+	<script type="text/javascript">
+	function incluir(){
+
+		var formulario= document.getElementById("empregados");
+		var nome= formulario.nome.value;
+		var sobrenome= formualario.sobrenome.value;
+		var salario= formulario.salario.value;
+		
+		
+		if (isNaN(nome)==false) {
+			alert("Por favor, digite somente letras")
+		} else if (isNaN(sobrenome)==false) {
+			alert("Por favor, digite somente letras")
+		} else if (isNaN(salario)==true){
+			alert("Por favor, digite somente numeros")
+		}else{
+			alert("Dados inseridos com sucesso!")
+		}
+
+	}
+
+	</script>
+</header>
+<body>
+<form id="empregados">
+	<fieldset>
+		<label>Nome do empregado:</label>
+		<input type="text" name="nome"/>
+		<label>Sobrenome:</label>
+		<input type="text" name="sobrenome"/>
+		<label>Salário</label>
+		<input type="text" name="salario"/>
+		
+		<input type="button" name="Button" value="Incluir Dados" onclick="incluir();"/>
+
+	</fieldset>
+
+
+</form>
+</body>
+
+
+
+</html>

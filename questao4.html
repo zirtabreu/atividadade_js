@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<header>
+	<meta charset="utf-8">
+	<title>Página html</title>
+	<link rel="stylesheet" type="text/css" href="questao4.css">
+	
+</header>
+<body>
+<script type="text/javascript">
+	       var box = document.getElementById('box');
+            var inicio = 0;
+            setInterval(function()){
+                if(inicio < 100){
+                    box.style.top  = inicio + 'px';
+                    box.style.left = inicio + 'px';
+                    inicio += 10;
+                    console.log()
+                }
+            }, 10);
+	</script>
+</body>
+<div id="box">
+</div>
+
+
+</html>

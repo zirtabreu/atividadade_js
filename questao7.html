@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Questão 7</title>
+</head>
+<body>
+    <h1> Lista de Atividades </h1>
+
+    <input id="incluir" type="text" name="incluir">
+    
+    <button id="inserir">Incluir</button>
+    
+    <ul id="lista"></ul>
+
+     <script>
+         var lista = [];
+         
+         var inserir = document.getElementById('inserir');
+         
+         var incluirTarefa = function () {
+             
+             var tarefa = document.getElementById('incluir').value;
+             
+             if (tarefa != '') {
+                 lista.push(tarefa);
+                 printTarefas(tarefa);
+                 clear();
+             
+             }else{ alert('Você precisa incluir uma tarefa!');}
+            
+            };
+
+         var printTarefas = function (inserir) {
+             var lista = document.getElementById('lista');
+             var l1 = document.createElement('l1');
+             l1.innerHTML = '<br>' + inserir + '</br>';
+             lista.appendChild(l1);
+         };
+         function clear() {
+             document.getElementById('inserir').value = '';
+         }
+         inserir.onclick = incluirTarefa;
+    </script>
+</body>
+</html>
